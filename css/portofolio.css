@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    border-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    width: 1200px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 24px;
+    color: gold;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.116); */
+    background-color: white;
+}
+
+header > h1{
+    letter-spacing: 9px;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+li{
+    margin-right: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(37,40,41);
+    font-weight: 400;
+    font-size: large;
+}
+
+#home{
+    border-bottom: 4px solid gold;
+}
+
+/* Isi */
+main{
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+}
+section {
+    display: flex;
+    width: 100%;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#direktori{
+    font-size: 40px;
+    color: rgba(239,239,239);
+    margin-bottom: 60px;
+}
+
+#direktori > span{
+    font-size: 80px;
+    color: gold;
+    border-bottom: 5px solid gold;
+}
+
+h3 {
+    font-size: 16px;
+    color: rgba(205,205,205);
+    letter-spacing: 9px;
+    margin-bottom: 6px;
+}
+
+#nama{
+    font-size: 40px;
+    color: rgba(45,47,46);
+    word-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+p{
+    color: rgba(45,47,46);
+}
+
+img{
+    width: 500px;
+}

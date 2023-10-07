@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    border-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    width: 1200px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 24px;
+    color: gold;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.116); */
+    background-color: white;
+}
+
+header>h1 {
+    letter-spacing: 9px;
+}
+
+nav>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav> ul> li {
+    margin-right: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(37, 40, 41);
+    font-weight: 400;
+    font-size: large;
+}
+
+#about {
+    border-bottom: 4px solid gold;
+}
+
+/* Isi */
+main {
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 150px;
+    column-gap: 100px;
+    row-gap: 60px;
+}
+
+@media (max-width: 1200px){
+    section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin-top: 150px;
+    }
+}
+
+#section-left {
+    width: 100%;
+}
+
+#direktori {
+    font-size: 40px;
+    color: rgba(239, 239, 239);
+    margin-bottom: 60px;
+}
+
+#direktori>span {
+    font-size: 80px;
+    color: gold;
+    border-bottom: 5px solid gold;
+}
+
+h3 {
+    font-size: 16px;
+    color: rgba(205, 205, 205);
+    letter-spacing: 9px;
+    margin-bottom: 6px;
+}
+
+#nama {
+    font-size: 40px;
+    color: rgba(45, 47, 46);
+    word-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+p {
+    color: rgba(45, 47, 46);
+}
+
+#section-right {
+    width: 100%;
+}
+
+#section-right>ul {
+    list-style-type: none;
+}
+
+#section-right >ul>li{
+    margin-bottom: 20px;
+}
+
+li>h4{
+    margin-bottom: 12px;
+}
+
+/* BAR */
+
+.bar{ /*style the bar*/
+	background-color: white;
+	display: block;
+    width: 100%;
+	height: 8px;
+	border: 1px solid rgb(247, 247, 247);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px gold;
+}
+
+.bar span{ /*style the span tag*/
+	height: 8px;
+	float: left;
+	background-color: gold;
+}
+
+.html{ /*set skills and animation of html*/
+	width: 85%;
+	animation: html 2s;
+}
+
+.css{
+    width: 65%;
+    animation: css 2s;
+}
+
+.javascript{
+    width: 50%;
+    animation: javascript 2s;
+}
+
+.tailwind{
+    width: 80%;
+    animation: tailwind 2s;
+}
+
+.bootstrap{
+    width: 70%;
+    animation: bootstrap 2s;
+}
+
+.git{
+    width: 70%;
+    animation: git 2s;
+}
+
+.laravel{
+    width: 70%;
+    animation: laravel 2s;
+}
+
+/* Keyframe */
+
+@keyframes html{ /*animate html skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 85%;
+	}
+}
+
+@keyframes css{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 65%;
+	}
+}
+
+@keyframes javascript{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes tailwind{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes bootstrap{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 70%;
+	}
+}
+
+@keyframes git{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 70%;
+	}
+}
+
+@keyframes laravel{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 70%;
+	}
+}
