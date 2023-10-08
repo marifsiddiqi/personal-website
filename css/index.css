@@ -19,9 +19,8 @@ header {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: gold;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.116); */
     background-color: white;
@@ -34,6 +33,11 @@ header>svg{
 
 header>h1 {
     letter-spacing: 9px;
+    padding-left: 50px;
+}
+
+nav{
+    padding-right: 50px;
 }
 
 nav>ul {
@@ -60,6 +64,42 @@ nav>ul>li>a:hover {
     border-bottom: 4px solid gold;
 }
 
+/* Menu Mobile */
+header>div{
+    position: absolute;
+    top: 78px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    background-color: gold;
+    transition: max-height 0.5s ease-in-out, visiblity 0.5s;
+}
+
+header>div>ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+header>div>ul>li{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header>div>ul>li>a{
+    text-decoration: none;
+    font-weight: 400;
+    color: rgba(45, 47, 46);
+}
+
 /* Isi */
 main {
     display: flex;
@@ -73,7 +113,7 @@ section {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 150px;
+    margin-top: 100px;
     align-items: center;
     justify-content: space-between;
 }
@@ -85,9 +125,13 @@ section {
 }
 
 @media (max-width: 900px) {
+    header>h1{
+        padding-left: 20px;
+    }
+
     header>svg{
         color: rgba(45, 47, 46);
-        right: 50px;
+        right: 20px;
         visibility: visible;
     }
 

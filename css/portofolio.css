@@ -19,17 +19,25 @@ header {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: gold;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.116); */
     background-color: white;
-    z-index: 10;
+}
+
+header>svg{
+    position: absolute;
+    visibility: hidden;
 }
 
 header>h1 {
     letter-spacing: 9px;
+    padding-left: 50px;
+}
+
+nav{
+    padding-right: 50px;
 }
 
 nav>ul {
@@ -41,7 +49,7 @@ nav>ul>li {
     margin-right: 40px;
 }
 
-a {
+nav>ul>li>a {
     text-decoration: none;
     color: rgba(37, 40, 41);
     font-weight: 400;
@@ -54,6 +62,42 @@ nav>ul>li>a:hover {
 
 #portofolio {
     border-bottom: 4px solid gold;
+}
+
+/* Menu Mobile */
+header>div{
+    position: absolute;
+    top: 78px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    background-color: gold;
+    transition: max-height 0.5s ease-in-out, visiblity 0.5s;
+}
+
+header>div>ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+header>div>ul>li{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header>div>ul>li>a{
+    text-decoration: none;
+    font-weight: 400;
+    color: rgba(45, 47, 46);
 }
 
 /* Isi */
@@ -69,8 +113,8 @@ section {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 150px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 40px;
     column-gap: 100px;
     row-gap: 60px;
 }
@@ -98,6 +142,10 @@ section>ul {
 }
 
 @media (max-width: 1200px) {
+    header{
+        width: 100%;
+    }
+
     section>ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -105,6 +153,20 @@ section>ul {
 }
 
 @media (max-width: 900px) {
+    header>h1{
+        padding-left: 20px;
+    }
+
+    header>svg{
+        color: rgba(45, 47, 46);
+        right: 20px;
+        visibility: visible;
+    }
+
+    nav{
+        visibility: hidden;
+    }
+
     section>ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -142,6 +204,7 @@ section>ul>li>a>img {
     object-fit: cover;
     position: absolute;
     transition: opacity 0.3s;
+    z-index: -1;
     /* Tambahkan transisi pada opacity */
 }
 
