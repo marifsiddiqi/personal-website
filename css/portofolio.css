@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-header{
+header {
     display: flex;
     width: 1200px;
     position: fixed;
@@ -25,76 +25,191 @@ header{
     color: gold;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.116); */
     background-color: white;
+    z-index: 10;
 }
 
-header > h1{
+header>h1 {
     letter-spacing: 9px;
 }
 
-ul{
+nav>ul {
     display: flex;
     list-style-type: none;
 }
 
-li{
+nav>ul>li {
     margin-right: 40px;
 }
 
-a{
+a {
     text-decoration: none;
-    color: rgba(37,40,41);
+    color: rgba(37, 40, 41);
     font-weight: 400;
     font-size: large;
 }
 
-#home{
+nav>ul>li>a:hover {
+    border-bottom: 4px solid gold;
+}
+
+#portofolio {
     border-bottom: 4px solid gold;
 }
 
 /* Isi */
-main{
+main {
     display: flex;
     width: 1200px;
     justify-content: center;
 }
+
 section {
-    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 150px;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 20px;
+    column-gap: 100px;
+    row-gap: 60px;
 }
 
-#direktori{
+#direktori {
     font-size: 40px;
-    color: rgba(239,239,239);
+    color: rgba(239, 239, 239);
     margin-bottom: 60px;
 }
 
-#direktori > span{
+#direktori>span {
     font-size: 80px;
     color: gold;
     border-bottom: 5px solid gold;
 }
 
-h3 {
-    font-size: 16px;
-    color: rgba(205,205,205);
-    letter-spacing: 9px;
-    margin-bottom: 6px;
+section>ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    column-gap: 30px;
+    row-gap: 30px;
 }
 
-#nama{
-    font-size: 40px;
-    color: rgba(45,47,46);
-    word-spacing: 2px;
-    margin-bottom: 60px;
+@media (max-width: 1200px) {
+    section>ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    section>ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    section>ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    #list-direktori{
+        height: fit-content;
+    }
+}
+
+section>ul>li {
+    width: 100%;
+    height: 280px;
+}
+
+/* section>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid gold;
+    position: relative;
+}
+
+section>ul>li>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+section>ul>li>a>div {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+section>ul>li>a>img:hover {
+    visibility: hidden;
+} */
+
+section>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid gold;
+    position: relative;
+}
+
+section>ul>li>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.3s;
+    /* Tambahkan transisi pada opacity */
+}
+
+section>ul>li>a>.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Mulai dengan opacity 0 */
+    transition: opacity 0.3s;
+    /* Tambahkan transisi pada opacity */
+}
+
+section>ul>li>a:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+section>ul>li>a:hover img {
+    opacity: 0.2;
+    /* Hilangkan gambar saat dihover */
+}
+
+section>ul>li>a:hover .overlay {
+    background-color: rgba(255, 255, 255, 0.8); 
+    opacity: 1;
+    /* Tampilkan div overlay saat dihover */
+}
+
+h4{
+    margin-top: 30px;
+    color: rgba(37, 40, 41);
 }
 
 p{
-    color: rgba(45,47,46);
-}
-
-img{
-    width: 500px;
+    color: gray;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
 }

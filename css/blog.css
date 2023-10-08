@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-header{
+header {
     display: flex;
     width: 1200px;
     position: fixed;
@@ -27,51 +27,73 @@ header{
     background-color: white;
 }
 
-header > h1{
+header>h1 {
     letter-spacing: 9px;
 }
 
-ul{
+nav>ul {
     display: flex;
     list-style-type: none;
 }
 
-li{
+nav> ul> li {
     margin-right: 40px;
 }
 
-a{
+a {
     text-decoration: none;
-    color: rgba(37,40,41);
+    color: rgba(37, 40, 41);
     font-weight: 400;
     font-size: large;
 }
 
-#home{
+nav>ul>li>a:hover{
+    border-bottom: 4px solid gold;
+}
+
+#blog {
     border-bottom: 4px solid gold;
 }
 
 /* Isi */
-main{
+main {
     display: flex;
     width: 1200px;
     justify-content: center;
 }
+
 section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 150px;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 20px;
+    column-gap: 100px;
+    row-gap: 60px;
 }
 
-#direktori{
+@media (max-width: 1200px){
+    section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin-top: 150px;
+    }
+}
+
+#section-left {
+    width: 100%;
+}
+
+#direktori {
     font-size: 40px;
-    color: rgba(239,239,239);
+    color: rgba(239, 239, 239);
     margin-bottom: 60px;
 }
 
-#direktori > span{
+#direktori>span {
     font-size: 80px;
     color: gold;
     border-bottom: 5px solid gold;
@@ -79,22 +101,53 @@ section {
 
 h3 {
     font-size: 16px;
-    color: rgba(205,205,205);
+    color: rgba(205, 205, 205);
     letter-spacing: 9px;
     margin-bottom: 6px;
 }
 
-#nama{
+#nama {
     font-size: 40px;
-    color: rgba(45,47,46);
+    color: rgba(45, 47, 46);
     word-spacing: 2px;
     margin-bottom: 60px;
 }
 
-p{
-    color: rgba(45,47,46);
+p {
+    color: rgba(45, 47, 46);
 }
 
-img{
-    width: 500px;
+#section-right {
+    width: 100%;
+}
+
+#section-right>ul {
+    list-style-type: none;
+}
+
+#section-right >ul>li{
+    margin-bottom: 20px;
+}
+
+li>h4{
+    margin-bottom: 12px;
+}
+
+/* BAR */
+
+.bar{ /*style the bar*/
+	background-color: white;
+	display: block;
+    width: 100%;
+	height: 8px;
+	border: 1px solid rgb(247, 247, 247);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px gold;
+}
+
+.bar span{ /*style the span tag*/
+	height: 8px;
+	float: left;
+	background-color: gold;
 }

@@ -47,6 +47,10 @@ a {
     font-size: large;
 }
 
+nav>ul>li>a:hover{
+    border-bottom: 4px solid gold;
+}
+
 #about {
     border-bottom: 4px solid gold;
 }
@@ -62,9 +66,10 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 150px;
+    margin-bottom: 20px;
     column-gap: 100px;
     row-gap: 60px;
 }
@@ -99,13 +104,6 @@ h3 {
     color: rgba(205, 205, 205);
     letter-spacing: 9px;
     margin-bottom: 6px;
-}
-
-#nama {
-    font-size: 40px;
-    color: rgba(45, 47, 46);
-    word-spacing: 2px;
-    margin-bottom: 60px;
 }
 
 p {
@@ -147,7 +145,9 @@ li>h4{
 	background-color: gold;
 }
 
-.html{ /*set skills and animation of html*/
+/* Set Skill dan animasi */
+
+.html{
 	width: 85%;
 	animation: html 2s;
 }
@@ -180,6 +180,36 @@ li>h4{
 .laravel{
     width: 70%;
     animation: laravel 2s;
+}
+
+.mysql{
+    width: 75%;
+    animation: mysql 2s;
+}
+
+.cpp{
+    width: 45%;
+    animation: cpp 2s;
+}
+
+.java{
+    width: 60%;
+    animation: java 2s;
+}
+
+.python{
+    width: 65%;
+    animation: python 2s;
+}
+
+.php{
+    width: 75%;
+    animation: php 2s;
+}
+
+.chartjs{
+    width: 30%;
+    animation: chartjs 2s;
 }
 
 /* Keyframe */
@@ -251,5 +281,65 @@ li>h4{
 
 	100%{
 		width: 70%;
+	}
+}
+
+@keyframes mysql{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 75%;
+	}
+}
+
+@keyframes cpp{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 45%;
+	}
+}
+
+@keyframes java{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 60%;
+	}
+}
+
+@keyframes python{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 65%;
+	}
+}
+
+@keyframes php{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 75%;
+	}
+}
+
+@keyframes chartjs{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 30%;
 	}
 }
